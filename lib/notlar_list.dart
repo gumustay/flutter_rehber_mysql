@@ -138,7 +138,7 @@ class _NoteScreenState extends State<NotlarList> {
           //trailing: Icon(Icons.add),
           onTap: () {
             buttonTap1(context,
-                fruit); 
+                fruit);
 
           },
         )
