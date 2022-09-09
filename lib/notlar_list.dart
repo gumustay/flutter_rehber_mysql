@@ -24,9 +24,9 @@ class _NoteScreenState extends State<NotlarList> {
   List countries = [];
   bool isSearching = false;
   List<Rehbers> filteredCountries = [
-  ]; // detay sayfasına index gönderirken fruits türünde olmalıki gönderirken fruits indexleme yapabilelim
+  ]; //
 
-  // İlk başta bütün datayı filteredCountries e aktarmak için
+
 
   //Title baslik;
 
@@ -34,7 +34,7 @@ class _NoteScreenState extends State<NotlarList> {
   @override
   void initState() {
 
-    getAllRehber().then((data) {   // VT den gele sorgu "data" adında değişkene atandı (listeleme için kullanılacak)
+    getAllRehber().then((data) {   //
       setState(() {
 
         countries = filteredCountries = data;  // liste ye atandı
@@ -86,10 +86,10 @@ class _NoteScreenState extends State<NotlarList> {
               //itemCount: snapshot.data.length,            // liste sayısını belirliyoruz
               itemCount: filteredCountries.length,
 
-              itemBuilder: (context, i) { // i oluşturulan listenin index i
+              itemBuilder: (context, i) {
                 //return _buildRow2(snapshot.data[i],i);
                 return _buildRow2(filteredCountries[i],
-                    i); // Fruits indexleme yaparak gönderdik
+                    i);
 
                 /*  return ListTile(
                   title: Text(snapshot.data[i].toString()),
@@ -138,7 +138,7 @@ class _NoteScreenState extends State<NotlarList> {
           //trailing: Icon(Icons.add),
           onTap: () {
             buttonTap1(context,
-                fruit); // list üzerine tıklandığında indexlenmiş Fruits değeri gönderilir
+                fruit); 
 
           },
         )

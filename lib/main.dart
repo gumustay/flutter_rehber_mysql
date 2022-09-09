@@ -411,7 +411,7 @@ class RandomFruitsState extends State<RandomFruits>  {
       // *** DROPDOWN
       dropdownValue = 'TÜM İLÇELER';
 
-      getAllRehber().then((data) {   
+      getAllRehber().then((data) {
         setState(() {
 
           countries = futureRehber = data;  // liste ye atandı
