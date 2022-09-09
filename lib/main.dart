@@ -46,19 +46,19 @@ class RandomFruitsState extends State<RandomFruits>  {
 
 
 
-  //List<Fruits> items = new List(); // VT den gelecek liste için 2. YÖNTEM
+
 
   //YENİ
   List<Rehbers> futureRehber = [];
   List countries = [];
   bool isSearching = false;
 
-  // İlk başta bütün datayı filteredCountries e aktarmak için
+  //
   @override
   void initState() {
 
 
-    getAllRehber().then((data) {   // VT den gele sorgu "data" adında değişkene atandı (listeleme için kullanılacak)
+    getAllRehber().then((data) {   //
       setState(() {
 
         countries = futureRehber = data;  // liste ye atandı
@@ -257,7 +257,7 @@ class RandomFruitsState extends State<RandomFruits>  {
           backgroundColor: Colors.blue[100],
           //backgroundColor: Color(0xFF537ca3),
 
-          iconTheme: new IconThemeData(color: Colors.blue[900]), // menü Hamburger icon rengini değiştir
+          iconTheme: new IconThemeData(color: Colors.blue[900]), // menü  icon rengini değiştir
 
           title: !isSearching             // true ise "Okul Ara" yaz.
               ? Text('Okul/Müdür Bul',style: TextStyle(color: Colors.black,fontSize: 17))
@@ -315,12 +315,12 @@ class RandomFruitsState extends State<RandomFruits>  {
             return snapshot.hasData ?
             new ListView.builder(
               padding: const EdgeInsets.all(10.0),
-              //itemCount: snapshot.data.length,            // liste sayısını belirliyoruz
+              //itemCount: snapshot.data.length,
               itemCount: futureRehber.length,
 
-              itemBuilder: (context, i) {                // i oluşturulan listenin index i
+              itemBuilder: (context, i) {
                 //return _buildRow2(snapshot.data[i],i);
-                return _buildRow2(futureRehber[i],i); // Fruits indexleme yaparak gönderdik
+                return _buildRow2(futureRehber[i],i);
 
                 /*  return ListTile(
                   title: Text(snapshot.data[i].toString()),
@@ -384,7 +384,7 @@ class RandomFruitsState extends State<RandomFruits>  {
           //trailing: Icon(Icons.add),
           onTap: () {
 
-            buttonTap1(context , fruit); 
+            buttonTap1(context , fruit);
             // Toast.show(fruit.name, context, duration: Toast.LENGTH_SHORT, gravity:  Toast.BOTTOM);
           },
         )
@@ -411,7 +411,7 @@ class RandomFruitsState extends State<RandomFruits>  {
       // *** DROPDOWN
       dropdownValue = 'TÜM İLÇELER';
 
-      getAllRehber().then((data) {   // VT den gele sorgu "data" adında değişkene atandı (listeleme için kullanılacak)
+      getAllRehber().then((data) {   
         setState(() {
 
           countries = futureRehber = data;  // liste ye atandı
